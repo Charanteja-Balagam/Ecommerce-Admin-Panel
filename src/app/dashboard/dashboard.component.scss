@@ -1,0 +1,53 @@
+.header{
+
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    flex-direction: row-reverse;
+    
+    padding-right:20px;
+    align-items: center;
+    gap:20px;
+    span{
+        cursor:pointer;
+        font-size: 1.5rem;
+
+    }
+
+}
+
+.container-fluid{
+
+   display: flex;
+   
+    width:100%;
+    margin: 0;
+    padding: 0;
+    height:100vh;
+  
+
+   
+
+    .container.sidebar{
+      
+        margin: 0;
+        padding: 0;
+        background : linear-gradient(120deg,var(--secondary-color), rgb(34,25,96) );
+        width: 20%;
+        color:#fff;
+        padding:2px 50px;
+        border-top: solid 1px rgba(236, 230, 230, 0.856) ;
+
+    }
+
+    .container.main{
+        
+      
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+

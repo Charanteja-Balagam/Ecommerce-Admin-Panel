@@ -1,0 +1,15 @@
+.container-fluid{
+
+   
+    padding:0;
+}
+.label{
+
+    display: block;
+}
+
+input::placeholder{
+    color: var(--secondary-light);
+    font-style: italic;
+}
+

@@ -1,0 +1,62 @@
+<div class="header">
+    <span>
+        <i class="bi bi-person-circle"></i>
+    </span>
+
+    <span>
+        <i class="bi bi-bell-fill"></i>
+    </span>
+    <span>
+        <i class="bi bi-envelope-fill"></i>
+
+    </span>
+
+
+
+
+</div>
+
+<div class="container-fluid">
+
+    <div class="container sidebar">
+
+        
+    <app-navigation> </app-navigation>
+        
+
+         
+
+    </div>
+
+    <div class="container main">
+        
+        <router-outlet> </router-outlet>
+
+    </div>
+
+
+
+</div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel"><i class="bi bi-box-arrow-left"></i>Logout</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-danger">
+         <p> confirm to logout </p> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    

@@ -1,0 +1,75 @@
+
+
+<div class="container-fluid register-section">
+    <div class="card register-card p-2 shadow-lg">
+        <div class="card-header p-3">
+            Register
+        </div>
+        <div class="card-body">
+            <form [formGroup] ="userRegForm">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" formControlName="firstName" required>
+                </div>
+                <div *ngIf="userRegForm?.get('firstName')?.invalid &&(userRegForm.get('firstName')?.dirty || userRegForm.get('firstName')?.touched)">
+                  <div *ngIf="userRegForm?.get('firstName')?.errors">
+                    <p class="text-danger"> First Name required</p>
+                  </div>  
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" formControlName="lastName" required>
+                </div>
+                <div *ngIf="userRegForm?.get('lastName')?.invalid &&(userRegForm.get('lastName')?.dirty || userRegForm.get('lastName')?.touched)">
+                    <div *ngIf="userRegForm?.get('lastName')?.errors">
+                      <p class="text-danger"> Last Name required</p>
+                    </div>
+                </div>    
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact</label>
+                    <input type="text" class="form-control" id="contact" placeholder="Enter your contact number" formControlName="contact" required>
+                </div>
+                <div *ngIf="userRegForm?.get('contact')?.invalid &&(userRegForm.get('contact')?.dirty || userRegForm.get('contact')?.touched)">
+                    <div *ngIf="userRegForm?.get('contact')?.errors">
+                      <p class="text-danger"> Valid Contact required</p>
+                    </div>  
+                  </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="example@abc.com" formControlName="email" required>
+                </div>
+                <div *ngIf="userRegForm?.get('email')?.invalid &&(userRegForm.get('email')?.dirty || userRegForm.get('email')?.touched)">
+                    <div *ngIf="userRegForm?.get('email')?.errors">
+                      <p class="text-danger"> Email required</p>
+                    </div>  
+                  </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="8 - 14 characters password" formControlName="password" required>
+                </div>
+                <div *ngIf="userRegForm?.get('password')?.invalid &&(userRegForm.get('password')?.dirty || userRegForm.get('password')?.touched)">
+                    <div *ngIf="userRegForm?.get('password')?.errors">
+                      <p class="text-danger"> Password required</p>
+                    </div>  
+                  </div>
+                <div class="mb-3">
+                    <label for="confirmpassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmpassword" placeholder="8 - 14 characters password" formControlName="confirmPassword" required>
+                </div>
+                <div *ngIf="userRegForm?.get('confirmPassword')?.invalid &&(userRegForm.get('confirmPassword')?.dirty || userRegForm.get('confirmPassword')?.touched)">
+                    <div *ngIf="userRegForm?.get('confirmPassword')?.errors">
+                      <p class="text-danger"> Password doesn't match</p>
+                    </div>  
+
+                </div>
+                 
+            </form>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary float-end" (click)="register()" [disabled] = "!userRegForm.valid"  >Register</button>
+        </div>
+    </div>
+</div>
+
+

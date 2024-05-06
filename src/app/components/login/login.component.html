@@ -1,0 +1,47 @@
+<div class="container-fluid login-section">
+
+    <div class="card login-card  p-2 shadow-lg">
+        <div class="card-header p-3">
+
+            Login
+
+        </div>
+        <div class="card-body">
+            <form [formGroup]="loginForm">
+                <div class="row">
+                    <div class="col-xl-12 mb-3">
+                        <label for="email" class="form-label"> E-mail</label>
+                        <input type="text" class="form-control" id="email" placeholder="example@abc.com"
+                            formControlName="email">
+                        <div *ngIf="loginForm.controls['email'].hasError('required') && loginForm.controls['email'].touched"
+                            class="text-danger">
+
+                            Email is required!
+
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <label for="password" class="form-label"> Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="8 - 14 characters password"
+                            formControlName="password">
+                        <div *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched"
+                            class="text-danger">
+
+                            Password is required!
+
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+        <div class="card-footer">
+            <a routerLink="/register" > New User? </a>
+            <button class="btn btn-primary float-end" (click)="submit()" [disabled]="!this.loginForm.valid">
+                Login</button>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,31 @@
+.registration-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-card {
+    width: 300px;
+}
+
+input::placeholder {
+    color: var(--secondary-light);
+}
+
+.card-header {
+    background-color: var(--secondary-color);
+    color: var(--secondary-light);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+}
+
+.card-footer button {
+    background-color: var(--secondary-color);
+    color: var(--secondary-light);
+}
+
+.card-footer button:hover {
+    cursor: pointer;
+}
